@@ -1,14 +1,15 @@
 import { Schema, model } from 'mongoose';
 
-const CardSchema = new Schema(
+const BannerSchema = new Schema(
   {
     title: String,
-    description: String,
+    order: Number,
     active: { type: Boolean, default: true },
+    file: String,
   },
   {
     timestamps: true,
   }
 );
 
-export default model('Card', CardSchema);
+export default model('Banner', BannerSchema);
